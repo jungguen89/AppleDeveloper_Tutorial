@@ -11,7 +11,11 @@ import SwiftUI
 struct ScrumdingerApp: App {
     var body: some Scene {
         WindowGroup {
-            MeetingView()
+            // NavigationView 를 추가한 이유
+            NavigationView {
+                ScrumsView(scrums: DailyScrum.sampleData)
+            }
+
         }
     }
 }
